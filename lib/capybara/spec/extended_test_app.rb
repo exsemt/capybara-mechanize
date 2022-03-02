@@ -3,6 +3,8 @@
 require 'capybara/spec/test_app'
 
 class ExtendedTestApp < TestApp
+  @form_post_count = 0
+
   set :environment, :production # so we don't get debug info that makes our test pass!
   disable :protection
 

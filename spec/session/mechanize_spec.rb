@@ -7,17 +7,19 @@ module TestSessions
 end
 
 Capybara::SpecHelper.run_specs TestSessions::Mechanize, 'Mechanize', capybara_skip: %i[
-  js
-  screenshot
-  frames
-  windows
-  server
-  hover
-  modals
   about_scheme
-  send_keys
+  active_element
   css
   download
+  evaluate_script
+  frames
+  hover
+  js
+  modals
+  screenshot
+  send_keys
+  server
+  windows
 ]
 
 describe Capybara::Session do

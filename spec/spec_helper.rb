@@ -26,6 +26,7 @@ RSpec.configure do |config|
   end
 
   Capybara::SpecHelper.configure(config)
+  Capybara.server = :puma
 
   config.order = 'random'
 

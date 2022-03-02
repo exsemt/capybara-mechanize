@@ -17,17 +17,19 @@ shared_context 'remote tests' do
 end
 
 session_describe = Capybara::SpecHelper.run_specs TestSessions::RemoteMechanize, 'RemoteMechanize', capybara_skip: %i[
-  js
-  screenshot
-  frames
-  windows
-  server
-  hover
-  modals
   about_scheme
-  send_keys
+  active_element
   css
   download
+  evaluate_script
+  frames
+  hover
+  js
+  modals
+  screenshot
+  send_keys
+  server
+  windows
 ]
 
 session_describe.include_context('remote tests')
